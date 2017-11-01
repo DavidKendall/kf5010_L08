@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <assert.h>
 #include <pthread.h>
-#include <semaphore.h>
 
 #include "console.h"
 
@@ -18,7 +17,7 @@ int main (void) {
 
     console_init();
 
-    for (i = 1; i < 3; i += 1) {
+    for (i = 1; i < 4; i += 1) {
         rc = pthread_create(&thread[i], NULL, count_thr, (void *)i);
         assert(rc == 0);
     }
