@@ -24,7 +24,7 @@ int main (void) {
     rc = pthread_create(&thread[0], NULL, lcd_thr, NULL);
     assert(rc == 0);
 
-    for (i = 1; i < 3; i += 1) {
+    for (i = 1; i < 4; i += 1) {
         rc = pthread_create(&thread[i], NULL, count_thr, (void *)i);
         assert(rc == 0);
     }
